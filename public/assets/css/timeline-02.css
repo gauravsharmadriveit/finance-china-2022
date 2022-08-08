@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+/* html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+*{
+  margin: 0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.awsm-container {
+
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  max-width: 1100px;
+  margin: 0 auto;
+  /* padding: 100px 15px; */
+}
+.agenda_heading{
+  margin-bottom:50px;
+}
+
+.awsm-container::after {
+
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+.awsm-timeline {
+  position: relative;
+}
+
+.awsm-right-align {
+  text-align: right;
+}
+
+/*.awsm-date-opposite{
+padding: 0;
+}*/
+
+
+.awsm-timeline-block {
+  position: relative;
+  min-height: 16px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.awsm-timeline-block::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.awsm-timeline-block:last-child::before{
+  display: none;
+}
+/* .awsm-left-align .awsm-timeline-block::before {
+} */
+
+.awsm-right-align .awsm-timeline-block::before {
+  right: 0;
+  left: auto !important;
+  margin-left: 0 !important;
+}
+.awsm-timeline-block::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.awsm-timeline-img {
+  position: absolute;
+  min-width: 1px;
+  min-height: 1px;
+  left: 0;
+  top: 0;
+}
+.awsm-timeline-img i{
+  display: block;
+}
+
+.awsm-right-align .awsm-timeline-img {
+  margin-left: 0 !important;
+  left: auto !important;
+  right: 0;
+}
+.awsm-last-empty-item .awsm-timeline-img span{
+  vertical-align: top;
+}
+
+.awsm-timeline-content-inner {
+  position: relative;
+}
+
+.awsm-date {
+  display: block;
+}
+
+.cssanimations .awsm-timeline-content.is-hidden {
+  visibility: hidden;
+}
+
+.cssanimations .awsm-timeline-content.animated {
+  visibility: visible;
+}
+
+.awsm-labels span{
+  display: inline-block;
+}
+
+.awsm-labels{
+  padding: 20px 0;
+}
+.awsm-labels.awsm-start-label{
+  padding-top: 0 !important;
+}
+.awsm-labels.awsm-end-label{
+  margin-bottom: 0  !important;
+}
+
+
+@media only screen and (min-width:679px) {
+  .awsm-date-opposite {
+    margin-left: 190px;
+  }
+  .awsm-left-align.awsm-date-opposite {
+    margin-left: 250px;
+  }
+
+  .awsm-right-align.awsm-date-opposite {
+    margin-right: 190px;
+    margin-left: 0;
+    text-align: right;
+  }
+  .awsm-date-opposite.awsm-alternate{
+    margin: 0;
+  }
+
+
+  .awsm-timeline.awsm-alternate.awsm-left-align .awsm-timeline-content,
+  .awsm-timeline.awsm-date-opposite.awsm-left-align .awsm-timeline-content,
+  .awsm-timeline.awsm-alternate.awsm-right-align .awsm-timeline-content,
+  .awsm-timeline.awsm-date-opposite.awsm-right-align .awsm-timeline-content {
+    width: 100%;
+  }
+
+  .awsm-alternate .awsm-timeline-block::before {
+    left: 50%;
+  }
+
+  .awsm-alternate .awsm-timeline-img {
+    left: 50% !important;
+  }
+
+  .awsm-alternate .awsm-timeline-block.awsm-even-item .awsm-timeline-content {
+    float: right;
+  }
+  .awsm-alternate .awsm-timeline-block.awsm-odd-item .awsm-timeline-content {
+    float: left;
+  }
+
+  .awsm-date-opposite .awsm-date {
+    position: absolute;
+    top: 0;
+    text-align: right;
+    font-family: var(--f1);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+  .awsm-alternate .awsm-timeline-block.awsm-odd-item .awsm-timeline-content,
+  .awsm-alternate.awsm-date-opposite .awsm-timeline-block.awsm-even-item .awsm-date,
+  .awsm-date-opposite.awsm-left-align .awsm-date,
+  .awsm-right-align {
+    text-align: right;
+  }
+
+  .awsm-alternate.awsm-date-opposite .awsm-timeline-block.awsm-odd-item .awsm-timeline-content .awsm-date,
+  .awsm-date-opposite.awsm-right-align .awsm-date {
+    text-align: left;
+  }
+  .awsm-alternate .awsm-timeline-label-block{
+    text-align: center;
+  }
+  .awsm-alternate .awsm-timeline-label-block .awsm-labels span{
+    left: 0;
+    right: 0;
+  }
+
+}
+
+@media only screen and (max-width:678px) {
+  .awsm-timeline{
+    margin-left: 20px;
+  }
+  .awsm-timeline.awsm-right-align, 
+  .awsm-timeline.awsm-responsive-right {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .awsm-responsive-right .awsm-timeline-block::before {
+    right: 0;
+    left: auto !important;
+    margin-left: 0 !important;
+  }
+  .awsm-responsive-right {
+    text-align: right;
+  }
+  .awsm-responsive-right .awsm-timeline-img {
+    margin-left: 0 !important;
+    left: auto !important;
+    right: 0;
+  }
+  .awsm-date{
+    margin-bottom: 10px;
+  }
+}
+@media(min-width: 768px) and (max-width:992px){
+.awsm-timeline-block {
+padding-right: 0px;
+}
+
+.awsm-left-align.awsm-date-opposite {
+margin-left: 140px!important;
+}
+.awsm-timeline-style-1 .awsm-timeline-img {
+margin-left: -40px;
+}
+}
+@media only screen and (max-width:678px) {
+.awsm-timeline{
+margin-left: 20px;
+}
+.awsm-timeline.awsm-right-align,
+.awsm-timeline.awsm-responsive-right {
+margin-right: 20px;
+margin-left: 0;
+}
+.awsm-responsive-right .awsm-timeline-block::before {
+right: 0;
+left: auto !important;
+margin-left: 0 !important;
+}
+.awsm-responsive-right {
+text-align: right;
+}
+.awsm-responsive-right .awsm-timeline-img {
+margin-left: 0 !important;
+left: auto !important;
+right: 0;
+}
+.awsm-date{
+margin-bottom: 10px;
+}
+.awsm-timeline-style-1 .awsm-timeline-label-block {
+padding-left: 15px;
+}
+.awsm-timeline-block {
+
+padding-left: 35px;
+padding-right: 0px;
+}
+.awsm-timeline {
+margin-left: 0px!important;
+}
+.awsm-timeline-style-1 .awsm-timeline-content-inner {
+padding: 15px;
+
+}
+.awsm-timeline-img {
+left:6px;
+}
+.awsm-container {
+padding: 50px 0px;
+}
+
+.awsm-timeline-style-1 .awsm-timeline-block::before {
+
+margin-left: 0px;
+}
+}

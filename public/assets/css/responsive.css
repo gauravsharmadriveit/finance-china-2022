@@ -1,0 +1,92 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .banner-text{
+        padding: 20px 20px 0;
+        margin: 24px 0 0;
+    }
+    .banner-text h2{
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .banner-img img{
+        margin: 30px auto;
+    }
+    .btn{
+    text-align: left;
+    white-space: unset;
+    }
+    .price-card{
+        margin: 10px 0 40px;
+    }
+    .nav-tabs .nav-link{
+        font-size: 13px;
+    }
+    .tab-text p{
+        font-size: 15px;
+    }
+    .tab-text h4{
+        font-size: 16px;
+    }
+    .btn-link{
+        font-size: 15px;
+    }
+    .card-tabContent ul li{
+        font-size: 15px;
+    }
+    .tab-text h3{
+        font-size: 25px;
+    }
+    .price-card-heading h4{
+        font-size: 22px;
+    }
+    .pull-right{
+        font-size: 15px;
+    }
+    .price-card .price-check [type="radio"]:checked + label{
+        font-size: 15px;
+    }
+    .team-detail p{
+        font-size: 15px;
+    }
+    .contcat-mail a{
+        font-size: 15px;
+    }
+    .contact-call a{
+        font-size: 15px;
+    }
+    .contcat-mail a i, .contact-call a i{
+        font-size: 15px;
+    }
+    .social-footer a{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .nav-tabs .nav-link{
+        font-size: 17px;
+    }
+    .banner-text h2{
+        font-size: 24px;
+        line-height: 40px;
+    }
+    .btn{
+        text-align: left;
+    }
+    .pull-right{
+        text-align: left;
+    }
+    .our-team-btn button{
+        padding: 12px 4px;
+        font-size: 15px;
+    }
+    .buy-now-btn a{
+        font-size: 15px;
+    }
+    .registration-form .checkbox label{
+        margin: 11px 20px;
+    }
+}
+ 

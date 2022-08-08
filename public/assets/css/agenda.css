@@ -1,0 +1,214 @@
+.cd-main-header {
+	height: 200px;
+	background: var(--c3);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+
+.cd-timeline {
+	overflow: hidden;
+	padding: 2em 0;
+	padding: var(--space-lg) 0;
+	color: hsl(207, 10%, 55%);
+	
+}
+
+
+
+.cd-timeline__container {
+	position: relative;
+	padding: 1.25em 0;
+
+}
+
+.cd-timeline__container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 18px;
+	height: 100%;
+	width: 4px;
+	border-radius: 3px;
+	background: var(--c1)
+}
+
+@media (min-width: 64rem) {
+	.cd-timeline__container::before {
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%)
+	}
+}
+
+.cd-timeline__block {
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 2em;
+	margin-bottom: var(--space-lg)
+}
+
+.cd-timeline__block:last-child {
+	margin-bottom: 0
+}
+
+/* @media (min-width: 64rem) {
+	.cd-timeline__block:nth-child(odd) {
+		-ms-flex-direction: unset;
+		flex-direction: unset
+	}
+} */
+
+.cd-timeline__img {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px hsl(0, 0%, 100%), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0 0 4px var(--c3), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)
+}
+
+.cd-timeline__img img {
+	width: 24px;
+	height: 24px
+}
+
+@media (min-width: 64rem) {
+	.cd-timeline__img {
+		width: 60px;
+		height: 60px;
+		-ms-flex-order: 1;
+		order: 1;
+		margin-left: calc(5% - 30px);
+		will-change: transform
+	}
+
+	.cd-timeline__block:nth-child(odd) .cd-timeline__img {
+		margin-right: calc(5% - 30px)
+	}
+}
+
+.cd-timeline__img--picture {
+	background-color: var(--c1);
+}
+
+.cd-timeline__img--movie {
+	background-color: var(--c1);
+}
+
+.cd-timeline__img--location {
+	background-color: var(--c1);
+}
+
+.cd-timeline__content {
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	position: relative;
+	margin-left: 1.25em;
+	background: var(--c3);
+	border-radius: 0.25em;	
+	padding: 1.25em;
+	box-shadow: 0 3px 0 hsl(205, 38%, 89%);
+	box-shadow: 0 3px 0 var(--cd-color-2)
+}
+
+.cd-timeline__content::before {
+	content: '';
+	position: absolute;
+	top: 16px;
+	right: 100%;
+	width: 0;
+	height: 0;
+	border: 7px solid transparent;
+	border-right-color: #fff;
+
+}
+
+.cd-timeline__content h2 {
+	color: hsl(206, 21%, 24%);
+	
+}
+
+@media (min-width: 64rem) {
+	.cd-timeline__content {
+		width: 45%;
+		-ms-flex-positive: 0;
+		flex-grow: 0;
+		will-change: transform;
+		margin: 0;
+		font-size: 0.8em;
+		--line-height-multiplier: 1.2;
+		padding: 15px;
+		border-radius: 5px;
+		box-shadow: 0 8px 21px rgb(225 231 255 / 58%);
+		-ms-flex-direction: reverse;
+		flex-direction: reverse
+	}
+
+	.cd-timeline__content::before {
+		top: 24px
+	}
+
+	.cd-timeline__block:nth-child(even) .cd-timeline__content::before {
+		right: auto;
+		left: 100%;
+		width: 0;
+		height: 0;
+		border: 7px solid transparent;
+		border-left-color: var(--c3);
+
+	}
+}
+
+.cd-timeline__date {
+	color: hsla(207, 10%, 55%, 0.7);
+	color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.7)
+}
+
+@media (min-width: 64rem) {
+	.cd-timeline__date {
+		position: absolute;
+		width: 100%;
+		left: 120%;
+		top: 20px
+	}
+
+	.cd-timeline__block:nth-child(odd) .cd-timeline__date {
+		left: auto;
+		right: 120%;
+		text-align: right
+	}
+}
+
+/* @media (min-width: 64rem) {
+
+	.cd-timeline__img--hidden,
+	.cd-timeline__content--hidden {
+		visibility: hidden
+	}
+
+	.cd-timeline__img--bounce-in {
+		-webkit-animation: cd-bounce-1 0.6s;
+		animation: cd-bounce-1 0.6s
+	}
+
+	.cd-timeline__content--bounce-in {
+		-webkit-animation: cd-bounce-2 0.6s;
+		animation: cd-bounce-2 0.6s
+	}
+
+	.cd-timeline__block:nth-child(odd) .cd-timeline__content--bounce-in {
+		-webkit-animation-name: cd-bounce-2-inverse;
+		animation-name: cd-bounce-2-inverse
+	}
+} */

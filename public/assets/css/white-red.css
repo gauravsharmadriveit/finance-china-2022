@@ -1,0 +1,76 @@
+/* Desktop Main Menu Color */
+
+.wsmainfull {
+  background-color: var(--c3);
+  box-shadow:0 8px 21px rgb(225 231 255 / 58%);
+}
+.fixed {
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
+  z-index: 999;
+  -webkit-animation: sticky 1.2s;
+  animation: sticky 1.2s;
+  box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  /* border-style: solid;
+  border-color: #E7EBF0;
+  border-width: 0;
+  border-bottom-width: thin; */
+  /* background: rgba(255,255,255,0.7); */
+  background-color: rgb(255 255 255);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 21px rgb(225 231 255 / 58%);
+-webkit-animation: menu_sticky 0.7s ease-in-out;
+animation: menu_sticky 0.7s ease-in-out;
+}
+/* .wsmenu>.wsmenu-list {
+  background-color: var(--c5);
+} */
+
+/* Mobile Header */
+
+.wsmenu>.wsmenu-list>li.headerbtns a.headerbtn01{
+  background-color: var(--c5)
+}
+
+.wsmenu>.wsmenu-list>li.headerbtns a.headerbtn02{
+  border-color: var(--c4)
+}
+
+.wsmenu>.wsmenu-list>li>a:after {
+  background-color: var(--c5)
+}
+
+
+.wsmobileheader {
+  background-color: var(--c3);
+}
+
+.wsmenu>.wsmenu-list>li>a {
+  color: var(--c5);
+}
+ 
+.wsmenu>.wsmenu-list>li>a.active {
+  color: var(--c5)
+}
+
+.wsmenu>.wsmenu-list>li:hover>a {
+  color: var(--c5)
+}
+
+.wsmenu>.wsmenu-list>li>ul.sub-menu>li:hover>a {
+  background-color: var(--c5);
+  color: var(--c3);
+}
+
+.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li:hover>a {
+  background-color: var(--c4);
+  color: var(--c3);
+}
+
+.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu>li:hover a {
+  background-color: var(--c4);
+  color: var(--c3);
+}
